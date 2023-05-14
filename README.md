@@ -35,4 +35,4 @@ Dahsboard.py: dashboarding app created as a result of the analysis
 #### Datasets:
 all_leagues_s1_22.csv: Contains all player performance data used for the purpose of the analysis  
 manual_test.csv: manual testing dataset whcih was removed from the training and validation set to validate the finished models  
-twitter_players.csv: Player positional data provided by @Jase_Ziv83 on Twiitter  
+players.csv: Player positional data provided by @Jase_Ziv83 on Twiitter  
