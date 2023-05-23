@@ -54,7 +54,7 @@ def similar_players(target_player, df, output_count):
     output_df['player'] = df['player']
     output_df['value'] = euclidean_list
 
-    output_df = output_df.sort_values('value', ascending=False).reset_index(drop=True).head(output_count + 1)
+    output_df = output_df.sort_values('value', ascending=True).reset_index(drop=True).head(output_count + 1)
 
     return output_df
 
