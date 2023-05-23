@@ -10,30 +10,30 @@ def player_values(player_df):
     output = output.values.tolist()[0]
     return output
     
-def cosine_similarity(list_1, list_2):
-    cos_sim = dot(list_1, list_2) / (norm(list_1) * norm(list_2))
-    return cos_sim
+def euclidean_distance(list_1, list_2):
+    distance = np.linalg.norm(list_1 - list_2)
+    return distance
 
 def similar_players(target_player, df, output_count):
     target_player_row = df[df['player'] == target_player].drop(['player'], axis=1)
     target_player_list = target_player_row.values.tolist()[0]
     
-    cosine_list = []
+    euclidean_list = []
     for player in df['player']:
         player_row = df[df['player'] == player].drop(['player'], axis=1)
         player_vals = player_row.values.tolist()
         
         if len(player_vals) == 1:
             player_list = player_vals[0]
-            cosine = cosine_similarity(target_player_list, player_list)
-            cosine_list.append(cosine)
+            euclidean = euclidean_distance(target_player_list, player_list)
+            euclidean_list.append(euclidean)
             
         else:
-            cosine_list.append(0)
+            euclidean_list.append(0)
 
     output_df = pd.DataFrame()
     output_df['player'] = df['player']
-    output_df['value'] = cosine_list
+    output_df['value'] = euclidean_list
 
     output_df = output_df.sort_values('value', ascending=False).reset_index(drop=True).head(output_count + 1)
 
