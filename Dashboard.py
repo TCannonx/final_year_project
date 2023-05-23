@@ -39,7 +39,7 @@ def similar_players(target_player, df, output_count):
 
     return output_df
 
-comparison_df = pd.read_csv('improved_vecotr_space.csv')
+comparison_df = pd.read_csv('improved_vecotor_space.csv')
 player_info  = pd.read_csv('player_info.csv')
 player_info.rename(columns={'Comp Level':'Comp_Level'}, inplace=True)
 
