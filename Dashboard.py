@@ -4,7 +4,6 @@ import streamlit as st
 import numpy as np
 from numpy import dot
 from numpy.linalg import norm
-os.chdir('D:/OneDrive/Analysis/Final_Year/thesis')
 
 def player_values(player_df):
     output = player_df.drop(['player'], axis=1)
