@@ -101,7 +101,8 @@ comparison_df = comparison_df[filtered_players]
 players = comparison_df['player'].to_list()
 
 if user_input not in players:
-    comparison_df = comparison_df.append(selected_player)
+    comparison_df = pd.concat([comparison_df, selected_player], ignore_index=True)
+#     comparison_df = comparison_df.append(selected_player)
 
 output_count = st.slider('Number Of Outputted Players', 5, 30, 10)
 
