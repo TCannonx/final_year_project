@@ -14,9 +14,27 @@ def euclidean_distance(list_1, list_2):
     distance = np.linalg.norm(list_1 - list_2)
     return distance
 
+# def similar_players(target_player, df, output_count):
+#     target_player_row = df[df['player'] == target_player].drop(['player'], axis=1)
+#     target_player_list = target_player_row.values.tolist()[0]
+    
+#     euclidean_list = []
+#     for player in df['player']:
+#         player_row = df[df['player'] == player].drop(['player'], axis=1)
+#         player_vals = player_row.values.tolist()
+        
+#         if len(player_vals) == 1:
+#             player_list = player_vals[0]
+#             euclidean = euclidean_distance(target_player_list, player_list)
+#             euclidean_list.append(euclidean)
+            
+#         else:
+#             euclidean_list.append(0)
+
 def similar_players(target_player, df, output_count):
     target_player_row = df[df['player'] == target_player].drop(['player'], axis=1)
     target_player_list = target_player_row.values.tolist()[0]
+    target_player_list = np.array(target_player_list)
     
     euclidean_list = []
     for player in df['player']:
@@ -25,6 +43,7 @@ def similar_players(target_player, df, output_count):
         
         if len(player_vals) == 1:
             player_list = player_vals[0]
+            player_list = np.array(player_list)
             euclidean = euclidean_distance(target_player_list, player_list)
             euclidean_list.append(euclidean)
             
