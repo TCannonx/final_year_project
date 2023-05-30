@@ -32,12 +32,12 @@ Furthermore, a more accurate model was developed to identify similar players acr
 The repository is structured as follows:  
   
 #### Code:
-Analysis_Notebook.ipynb: Main Notebook for Analysis  
-fbref_scraping.ipynb: Notebook used to obtain fbref data using web scraping techniques  
-questionnaire-analysis.ipynb: To analyse the results of the choices made by teh participants of the questionnaire  
-Dahsboard.py: dashboarding app created as a result of the analysis  
+**Analysis_Notebook.ipynb:** Main Notebook for Analysis  
+**fbref_scraping.ipynb:** Notebook used to obtain fbref data using web scraping techniques  
+**questionnaire_analysis.ipynb:** To analyse the results of the choices made by teh participants of the questionnaire  
+**Dahsboard.py:** Dashboarding app created as a result of the analysis  
 
 #### Datasets:
-all_leagues_s1_22.csv: Contains all player performance data used for the purpose of the analysis  
-manual_test.csv: manual testing dataset whcih was removed from the training and validation set to validate the finished models  
-players.csv: Player positional data provided by @Jase_Ziv83 on Twiitter  
+**all_leagues_s1_22.csv:** Contains all player performance data used for the purpose of the analysis  
+**manual_test.csv:** Manual Testing dataset which was removed from the training and validation set to validate the finished models  
+**players.csv:** Player positional data provided by @Jase_Ziv83 on Twiitter  
